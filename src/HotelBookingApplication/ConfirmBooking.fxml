@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: p;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HotelBookingApplication.ConfirmBookingController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: p;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HotelBookingApplication.ConfirmBookingController">
    <children>
       <Pane prefHeight="100.0" prefWidth="900.0" style="-fx-background-color: #CC66FF;">
          <children>
-            <Button fx:id="backBtn" layoutX="728.0" layoutY="19.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="148.0" style="-fx-background-color: #990033;" text="Back" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="backBtn" layoutX="728.0" layoutY="19.0" mnemonicParsing="false" onAction="#ActionOnBackBtn" prefHeight="63.0" prefWidth="148.0" style="-fx-background-color: #990033;" text="Back" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="24.0" />
                </font>
@@ -27,12 +24,12 @@
             <Font name="Cordia New Bold" size="40.0" />
          </font>
       </Label>
-      <Label fx:id="showCheckIn" layoutX="211.0" layoutY="167.0" prefHeight="49.0" prefWidth="103.0" text="xx-xx-xx">
+      <Label fx:id="showCheckIn" layoutX="211.0" layoutY="167.0" prefHeight="53.0" prefWidth="345.0" text="xx-xx-xx">
          <font>
             <Font name="Cordia New Bold" size="40.0" />
          </font>
       </Label>
-      <Button fx:id="confirmBookingBtn" layoutX="327.0" layoutY="611.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="248.0" style="-fx-background-color: #CC66FF;" text="Confirm Booking" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="confirmBookingBtn" layoutX="327.0" layoutY="611.0" mnemonicParsing="false" onAction="#ActionOnConfirmBookingBtn" prefHeight="56.0" prefWidth="248.0" style="-fx-background-color: #CC66FF;" text="Confirm Booking" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Corbel Bold" size="24.0" />
          </font>
@@ -57,12 +54,12 @@
             <Font name="Corbel Bold" size="36.0" />
          </font>
       </Label>
-      <Label fx:id="showTotalPrice" layoutX="211.0" layoutY="317.0" prefHeight="49.0" prefWidth="130.0" text="x,xxx THB">
+      <Label fx:id="showTotalPrice" layoutX="211.0" layoutY="317.0" prefHeight="53.0" prefWidth="345.0" text="x,xxx THB">
          <font>
             <Font name="Cordia New Bold" size="40.0" />
          </font>
       </Label>
-      <Label fx:id="showCheckOut" layoutX="211.0" layoutY="216.0" prefHeight="49.0" prefWidth="103.0" text="xx-xx-xx">
+      <Label fx:id="showCheckOut" layoutX="211.0" layoutY="216.0" prefHeight="53.0" prefWidth="345.0" text="xx-xx-xx">
          <font>
             <Font name="Cordia New Bold" size="40.0" />
          </font>
