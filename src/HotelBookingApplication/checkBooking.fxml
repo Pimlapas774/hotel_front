@@ -8,7 +8,7 @@
    <children>
       <Pane prefHeight="100.0" prefWidth="900.0" style="-fx-background-color: #CC66FF;">
          <children>
-            <Button fx:id="backBtn" layoutX="728.0" layoutY="19.0" mnemonicParsing="false" onAction="#ActionOnBtn" prefHeight="63.0" prefWidth="148.0" style="-fx-background-color: #990033;" text="Back" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="backBtn" layoutX="728.0" layoutY="19.0" mnemonicParsing="false" onAction="#ActionOnBackBtn" prefHeight="63.0" prefWidth="148.0" style="-fx-background-color: #990033;" text="Back" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="24.0" />
                </font>
@@ -19,7 +19,7 @@
                </font>
             </Label>
          </children></Pane>
-      <Button fx:id="checkBtn" layoutX="555.0" layoutY="210.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="112.0" style="-fx-background-color: #990033;" text="Check" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="checkBtn" layoutX="555.0" layoutY="210.0" mnemonicParsing="false" onAction="#ActionOnCheckBtn" prefHeight="47.0" prefWidth="112.0" style="-fx-background-color: #990033;" text="Check" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Corbel Bold" size="24.0" />
          </font>

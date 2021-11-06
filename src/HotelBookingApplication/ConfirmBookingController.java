@@ -6,16 +6,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class ConfirmBookingController {
     @FXML
@@ -125,10 +123,35 @@ public class ConfirmBookingController {
 
     }
 
-    public void ActionOnConfirmBookingBtn(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirm Booking");
-        alert.setContentText("Complete!!!");
+    public void ActionOnConfirmBookingBtn(ActionEvent event) throws IOException {
+        if(nameField.getText().isEmpty() || surnameField.getText().isEmpty() || emailField.getText().isEmpty() || phoneField.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("ERROR");
+            alert.setHeaderText("Blank details");
+            alert.setContentText("Please enter all the details");
+            alert.showAndWait();
+
+        }else{
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmation");
+            alert.setHeaderText("Comfirm Booking");
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if(result.get() == ButtonType.OK){
+
+
+
+                Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                alert2.setTitle("Success");
+                alert2.setContentText("Booking Successfully");
+                alert2.showAndWait();
+
+                confirmBookingBtn = (Button) event.getSource();
+                Stage stage = (Stage) confirmBookingBtn.getScene().getWindow();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
+                stage.setScene(new Scene(loader.load()));
+            }
+        }
     }
 
     public void setHotels(ArrayList<Hotel> hotels) {

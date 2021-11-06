@@ -21,10 +21,21 @@ public class checkBookingController {
     @FXML
     ListView showBooking;
 
-    public void ActionOnBtn(ActionEvent event) throws IOException {
+
+
+    public void ActionOnBackBtn(ActionEvent event) throws IOException {
         backBtn = (Button) event.getSource();
         Stage stage = (Stage) backBtn.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
         stage.setScene(new Scene(loader.load()));
+    }
+
+    public void ActionOnCheckBtn(ActionEvent event) {
+        showBooking.getItems().clear();
+        if(phoneField.getText().isEmpty()){
+            showBooking.getItems().add("!!! กรอกเบอร์โทรของผู้ที่ทำการจอง ก่อนนะ !!!");
+        }else{
+            showBooking.getItems().add("!!! โบ๋เบ๋ ไม่มีข้อมูล !!!");
+        }
     }
 }
